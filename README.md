@@ -8,6 +8,7 @@ This requires vagrant installed.
 $vagrant up
 
 -> ran following for connecting to server in ssh mode
+```
 $vagrant ssh
 Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-54-generic x86_64)
 
@@ -25,7 +26,9 @@ Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-54-generic x86_64)
 
 5 packages can be updated.
 5 updates are security updates.
-
+```
+-> now we are guest server
+```
 vagrant@ubuntu-bionic:~$
 vagrant@ubuntu-bionic:~$ pwd
 /home/vagrant
@@ -35,10 +38,12 @@ vagrant@ubuntu-bionic:~$ ls
 vagrant@ubuntu-bionic:~$ ls /
 bin   dev  home        initrd.img.old  lib64       media  opt   root  sbin  srv  tmp  vagrant  vmlinuz
 boot  etc  initrd.img  lib             lost+found  mnt    proc  run   snap  sys  usr  var      vmlinuz.old
-
+```
 
 -> /vagrant folder is synchronized directory between guest server and host
+```
 vagrant@ubuntu-bionic:/vagrant$ ls
 LICENSE  README.md  Vagrantfile  ubuntu-bionic-18.04-cloudimg-console.log
+```
 
 ->
