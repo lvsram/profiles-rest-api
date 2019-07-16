@@ -148,3 +148,13 @@ create superuser
 ```
 (env) vagrant@ubuntu-bionic:/vagrant$ python manage.py createsuperuser
 ```
+
+and enable admin by addin details to profiles_api/admin.py
+```
+admin.site.register(models.UserProfile)
+```
+
+->Create api view
+HelloWorld api view
+Updated file is profiles_api/view.py
+create urls.py in profile_api and then include this file to urls.py file of project.
