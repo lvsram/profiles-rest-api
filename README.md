@@ -144,3 +144,7 @@ Will run all migrations. Creates all required tables and so on.
 ```
 (env) vagrant@ubuntu-bionic:/vagrant$ python manage.py migrate
 ```
+create superuser
+```
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py createsuperuser
+```
