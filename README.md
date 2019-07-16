@@ -128,3 +128,19 @@ start django server to test... you can see django page at http://127.0.0.1:8000/
 (env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000
 
 ```
+
+Now update profile_api/models.py with user profile and user profile manager,
+which tells django that we enhanced user profile object model and model manager
+for managing changes.
+Now run makemigrations to prepare for migration.
+```
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py makemigrations profiles_api
+Migrations for 'profiles_api':
+  profiles_api/migrations/0001_initial.py
+    - Create model UserProfile
+```
+Now run migrate to make all changes to database for our django project.
+Will run all migrations. Creates all required tables and so on.
+```
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py migrate
+```
