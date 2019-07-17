@@ -158,3 +158,10 @@ admin.site.register(models.UserProfile)
 HelloWorld api view
 Updated file is profiles_api/view.py
 create urls.py in profile_api and then include this file to urls.py file of project.
+
+->Create serializer to receive we post to request to our API
+Serializer is a feature from the Django rest framework that allows you to easily
+convert data inputs into Python objects and vice versa. Is kind of similar to a
+Django form which you define and it has the various fields that you want to
+expect for the input for your API.
+So if we're going to add post or update functionality to our Hello API view then we need to create a Serializer to receive the content that we post to the API.
