@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
 from django.contrib.auth.models import BaseUserManager
+from django.conf import settings
 
 
 class UserProfileManger(BaseUserManager):
@@ -59,3 +60,21 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         """Retrieve string representation of our user"""
         return self.email
+
+
+class ProfileFeedItem(models.Model):
+    """Profile status update"""
+
+    #settings.AUTH_USER_MODEL means retrieving from settings.py instead of hard coding here
+    #on_delete = models.CASCADE means if user deletes UserProfile then feed will be deleted
+    user_profile = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete = models.CASCADE
+    )
+    status_text = models.CharField(max_length=255)
+    # sets to current time when any created
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        """Return model as a string"""
+        return self.status_text
