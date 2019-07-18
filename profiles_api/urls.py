@@ -13,6 +13,8 @@ router.register('profiles', views.UserProfileViewSet)
 urlpatterns = [
     # api view
     path('hello-view/', views.HelloApiView.as_view()),
+    # enable login endpoint
+    path('login/', views.UserLoginApiView.as_view()),
     # view set
     path('', include(router.urls)),
 
