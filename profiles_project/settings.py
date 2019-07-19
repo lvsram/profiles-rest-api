@@ -25,7 +25,10 @@ SECRET_KEY = 'hgfc0odnj+5(r=ah$vv)-hm=v+^*ge9m0%abit+i=9)*ay%byj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(int(os.envrion.get('DEBUG', 1)))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'ec2-18-188-199-21.us-east-2.compute.amazonaws.com',
+    '127.0.0.1'
+]
 
 
 # Application definition
